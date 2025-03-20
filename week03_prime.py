@@ -1,17 +1,20 @@
 number = int(input())
-is_prime = True
+count = 0
 
+for i in range(1, number + 1):
+    if number % i == 0:
+        count = count + 1
+    print(i, end=" ")
 if number >= 2:
-    i = 2
-    while i * i <= number:
+    for i in range(2, number):
         if number % i == 0:
-            is_prime = False
+            count = count + 1
         print(i, end=" ")
-        i = i + 1
 else:
-    is_prime = False
+    count = 1
 
-if is_prime:
-    print(f"{number}는(은) 소수입니다.")
-else:
-    print(f"{number}는(은) 소수가 아닙니다!")
+if count == 2:
+    if count == 0:
+        print(f"{number}는(은) 소수입니다.")
+    else:
+        print(f"{number}는(은) 소수가 아닙니다!")
