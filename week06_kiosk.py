@@ -40,4 +40,4 @@ for i in range(len(drinks)):
     if amounts[i] > 0:
         print(f"{drinks[i]} {prices[i]} {amounts[i]} {prices[i] * amounts[i]}")
 
-print(f"총 주문 금액 : {total_price}원")
+print(f"총주문 금액 : {total_price}원")
