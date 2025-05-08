@@ -5,7 +5,7 @@ if __name__ == "__main__":
         try:
             menu = int(input(kk.display_menu()))
             if len(kk.drinks) >= menu >= 1:
-                order_process(menu - 1)
+                kk.order_process(menu - 1)
             elif menu == len(kk.drinks)+1:
                 print("주문을 종료합니다")
                 break
@@ -14,4 +14,4 @@ if __name__ == "__main__":
         except ValueError:
             print(f"문자를 입력할 수 없습니다. 숫자를 입력해주세요")
 
-print_receipt()
+kk.print_receipt()
