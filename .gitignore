@@ -1,2 +1,4 @@
-# created by virtualenv automatically
-.venv/Lib
+.idea
+temp.py
+ticket.txt
+__pyche__/
