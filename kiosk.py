@@ -4,6 +4,7 @@ prices = [1500, 2500, 4000, 4200]
 # prices = [1500]
 amounts = [0] * len(drinks)
 total_price = 0
+import datetime
 
 # 할인 적용 정책
 DISCOUNT_THRESHOLD = 10000  # 할인이 적용되는 임계값 (임계값 이상이면 할인 적용)
@@ -102,7 +103,7 @@ def print_receipt() -> None:
         print(f"할인 적용 후 지불하실 총 금액은 {discounted_price}원 입니다.")
     else:
         print(f"할인이 적용되지 않았습니다.\n지불하실 총 금액은 {total_price}원 입니다.")
-
+    print(f"현재 시각 : {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 def test() -> None:
     """
